@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/views/LoginView.vue'
 import HomeView from '@/views/HomeView.vue'
 import GuideView from '@/views/GuideView.vue'
-import DailySleep from '@/views/DailySleep.vue'
-import DiaryList from '@/views/DiaryList.vue'
+import DiaryDaySelect1 from "@/views/DiaryDaySelect1.vue";
+import Home2 from '@/views/Home2.vue'
+import DiaryDaySelect2 from '@/views/DiaryDaySelect2.vue'
 import DiaryEntryView from '@/views/DiaryEntryView.vue'
 import SleepMusicView from '@/views/SleepMusicView.vue'
 
@@ -31,14 +32,20 @@ const router = createRouter({
       component: DiaryEntryView
     },
     {
-      // 2차 수면일기 선택 페이지 (수면 시작 vs 작성하기)
+      // 2차 수면일기 혹은 수면음악 선택 페이지 (수면 시작 vs 작성하기)
       path: '/action',
-      component: DailySleep 
+      name: 'action',
+      component: Home2 
     },
     {
-      // 일기 목록 페이지
+      // 2차 일기 목록 페이지
       path: '/list',
-      component: DiaryList
+      component: DiaryDaySelect2
+    },
+    {
+      path: '/daily-sleep', // 주소
+      name: 'DiaryDaySelect1', 
+      component: DiaryDaySelect1 
     },
     {
       path: '/music',

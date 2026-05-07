@@ -47,7 +47,7 @@
 
     <!-- 푸터 안내 -->
     <footer class="notice-footer">
-      <p>※ 마지막 {{ totalDays }}일차에는 음악 청취 경험 설문이 포함됩니다.</p>
+      <p>※ 순서와 상관 없이 재택 중재 마지막 날에는<br>‘마지막 날’을 선택하여 설문을 완료해주세요</p>
     </footer>
   </div>
 </template>
@@ -85,7 +85,7 @@ const goToDiaryEntry = (day) => {
 <style scoped>
 .container {
   min-height: 100vh;
-  background-color: #0F172A;
+  background: linear-gradient(to bottom, #6D5BBB, #9B8375);
   color: white;
   padding: 50px 24px;
   font-family: 'Pretendard', -apple-system, sans-serif;

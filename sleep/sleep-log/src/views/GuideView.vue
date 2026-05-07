@@ -17,11 +17,11 @@
     <section class="schedule-section">
       <div class="card">
         <h3 class="tag first">1차 수면 일기</h3>
-        <p>1-2회차 방문 사이<br><strong>집에서 3일간</strong> 작성</p>
+        <p>3회의 수면 센터 방문 기간 중 1회차와 2회차 방문 사이에<br>3일간 집에서 수면 후 아침에 작성합니다.</p>
       </div>
       <div class="card">
         <h3 class="tag second">2차 수면 일기</h3>
-        <p>2-3회차 방문 사이<br><strong>음악과 함께 5-7일</strong> 작성</p>
+        <p>3회의 수면 센터 방문 기간 중 2회차와 3회차 방문 사이에<br>최소 5일에서 최대 7일간 집에서 음악과 함께 수면 후 아침에 작성합니다.</p>
       </div>
     </section>
 
@@ -39,7 +39,7 @@
     <!-- 음악 청취 평가 -->
     <section class="music-eval-box">
       <h2>🎵 수면 음악 청취 경험 평가</h2>
-      <p class="description">2차 수면 일기 <strong>마지막 날 아침에 한 번만</strong> 답변해주세요.</p>
+      <p class="description">2차 수면 일기 <strong>마지막 날 아침에 한 번만</strong> 작성합니다.</p>
       <div class="step-guide">
         <span>마지막 날 클릭</span>
         <span class="arrow">→</span>
@@ -47,7 +47,7 @@
         <span class="arrow">→</span>
         <span>'다음으로' 클릭</span>
         <span class="arrow">→</span>
-        <span>경험 평가</span>
+        <span>음악 청취 경험 평가</span>
       </div>
     </section>
 

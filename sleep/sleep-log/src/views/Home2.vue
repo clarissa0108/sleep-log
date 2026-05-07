@@ -11,7 +11,7 @@
     <!-- 헤더 섹션 -->
     <header class="header">
       <h1 class="title">2차 수면일기</h1>
-      <p class="subtitle">오늘 밤 수면을 시작하거나<br>어제 밤 기록을 작성해주세요.</p>
+      <p class="subtitle">먼저 음악과 함께 수면을 취한 후<br>수면 일기를 작성해주세요.</p>
     </header>
 
     <!-- 메인 액션 버튼 섹션 -->
@@ -67,7 +67,7 @@ const goToList = () => {
 <style scoped>
 .container {
   min-height: 100vh;
-  background-color: #0F172A; /* 메인과 동일한 네이비 */
+  background: linear-gradient(to bottom, #071B41, #6D5BBB);
   color: white;
   padding: 50px 24px;
   font-family: 'Pretendard', -apple-system, sans-serif;
