@@ -152,49 +152,25 @@ function openGuide() {
   transform: scale(0.97);
 }
 
-/* 1차와 2차 모두 동일하게 적용 */
+/* 1차, 2차 버튼 통합 스타일 - 깨끗한 버전 */
 .primary, .secondary {
-  /* 1. 안쪽은 완전히 투명하게 */
   background: transparent;
-
-  /* 2. 테두리는 선명하고 깔끔한 화이트 (0.4 정도로 통일) */
   border: 1px solid rgba(255, 255, 255, 0.4);
-
-  /* 3. 입체감: 빛 번짐 없는 깔끔한 그림자만 */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  /* 4. 유리 재질감 (블러 효과) */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
-  /* 5. 텍스트 설정 */
   color: #FFFFFF;
   font-weight: 500;
   font-size: 1rem;
-  
-  /* 부드러운 반응을 위한 설정 */
   transition: all 0.25s ease;
   cursor: pointer;
 }
 
-/* 마우스를 올렸을 때만 똑같이 반응 */
 .primary:hover, .secondary:hover {
-  background: rgba(255, 255, 255, 0.1); /* 살짝 불투명해짐 */
-  border-color: rgba(255, 255, 255, 0.8); /* 테두리가 밝아짐 */
-  transform: translateY(-2px); /* 살짝 떠오름 */
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
 }
-  
-  /* 테두리: 선명하지만 빛나지는 않게 (0.7 -> 0.5로 낮춤) */
-  border: 1px solid rgba(255, 255, 255, 0.5); 
-
-  /* 입체감: 바깥쪽 glow(빛 번짐)를 대폭 줄이고, 테두리 안쪽만 살짝 강조 */
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.1),       /* 그림자는 어둡게 해서 빛을 죽임 */
-    inset 0 0 5px rgba(255, 255, 255, 0.1); 
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
 
 
 .icon-box {
