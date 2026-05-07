@@ -2,18 +2,20 @@
   <div class="login-container">
     <div class="login-card">
       <div class="login-header">
+        <div class="logo-circle">🌙</div>
         <h1>슬립 로그</h1>
-        <p>Sleep log</p>
+        <p>Your Deep Sleep Journey</p>
       </div>
 
       <form @submit.prevent="handleLogin" class="login-form">
-       <p>깊은 수면으로 떠날 준비 되셨나요?</p>
+        <p class="welcome-text">깊은 수면으로 떠나는 여행</p>
+        
         <div class="input-group">
           <input v-model="userId" type="text" placeholder="부여받은 ID를 입력해주세요" />
         </div>
 
         <div class="input-group">
-          <input v-model="name" type="text" placeholder="이름의 이니셜을 입력해주세요(예:KEW)" />
+          <input v-model="name" type="text" placeholder="이름의 이니셜 (예: KEW)" />
         </div>
 
         <button type="submit" class="login-button">출발</button>
@@ -31,11 +33,8 @@ const name = ref('')
 const router = useRouter() 
 
 const handleLogin = () => {
-  // 실제 서비스라면 여기서 아이디/비번 검사를 합니다.
   if (userId.value && name.value) {
     console.log('로그인 성공!')
-    
-    // '/home' 경로로 이동
     router.push('/home') 
   } else {
     alert('로그인 정보를 입력해주세요.')
@@ -44,98 +43,103 @@ const handleLogin = () => {
 </script>
 
 <style scoped>
-/* 배경 설정 */
+/* 1. 배경: 요청하신 색상으로 변경 (위: 071B41, 아래: 6D5BBB) */
 .login-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0F172A; /* Figma 배경색으로 변경 가능 */
-  font-family: sans-serif;
+  background: linear-gradient(to bottom, #071B41, #6D5BBB);
+  font-family: 'Pretendard', -apple-system, sans-serif;
 }
 
-/* 카드 디자인 */
+/* 2. 카드: 군더더기 없는 깔끔한 디자인 */
 .login-card {
-  width: 100%;
-  max-width: 400px;
-  padding: 40px;
-  background-color: #1E293B;
+  width: 90%;
+  max-width: 380px;
+  padding: 40px 28px;
+  background: rgba(255, 255, 255, 0.08); /* 은은한 투명도 */
+  backdrop-filter: blur(12px);
   border-radius: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .login-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+}
+
+.logo-circle {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
 }
 
 .login-header h1 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .login-header p {
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-/* 폼 스타일 */
+.welcome-text {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* 3. 입력창: 네온 제거, 매트하고 깔끔한 스타일 */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.input-group label {
-  color: #CBD5E1;
-  font-size: 0.9rem;
+  gap: 12px;
 }
 
 .input-group input {
-  padding: 12px 16px;
-  background-color: #0F172A;
-  border: 1px solid #334155;
+  width: 100%;
+  padding: 16px;
+  background-color: #132350;
+  border: 1px solid #132350;
   border-radius: 12px;
-  color: white;
-  outline: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  transition: border 0.2s;
+  box-sizing: border-box;
 }
 
 .input-group input:focus {
-  border-color: #6366F1;
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5); /* 네온 대신 차분한 강조 */
 }
 
-/* 버튼 스타일 */
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* 4. 버튼: 배경색과 조화로운 솔리드 스타일 */
 .login-button {
-  margin-top: 10px;
-  padding: 14px;
-  background-color: #6366F1;
-  color: white;
+  margin-top: 12px;
+  padding: 16px;
+  background-color: #3C3C80;
+  color: #FFFFFF;
   border: none;
   border-radius: 12px;
-  font-weight: bold;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.2s;
 }
 
 .login-button:hover {
-  background-color: #4F46E5;
-}
+  opacity: 0.9;
 
-.login-footer {
-  margin-top: 24px;
-  text-align: center;
-  color: #94A3B8;
-  font-size: 0.9rem;
-}
-
-.login-footer a {
-  color: #818CF8;
-  text-decoration: none;
 }
 </style>
